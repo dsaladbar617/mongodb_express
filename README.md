@@ -2,13 +2,13 @@
 
 [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
 
-To create the container either navigate to the software_mil directory and run 
+1. To create the container either navigate to the software_mil directory and run 
 ```
 docker-compose up -d
 ```
 or
 
-###In the terminal:  
+### In the terminal:  
 
 run the following command to create the directory where the db data will be stored:
 ```
@@ -26,7 +26,7 @@ docker run -d --rm --name mongod -p 27017:27017 -v $HOME/docker/volumes/mongodb:
 -v = set the folder where all of the data from the container will be save *note* this is important to make sure all of the db data is persistent  
 mongo = will use the latest mongodb docker image to create container  
 
-run the following to find the hash for container:
+2. run the following to find the hash for container:
 ```
 docker ps -a
 ```
@@ -38,29 +38,29 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS    
 e3c6f862ed27   mongo     "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mongod
 ```
 
-run the following with your container id to start up the container:
+3. run the following with your container id to start up the container:
 ```
 docker exec -it e3c bash
 ```
 
-once in the container you will run the command:
+4. once in the container you will run the command:
 ```
 mongosh
 ```
-next you will run the command:
+5. next you will run the command:
 ```
 use {name of database that you would like to create}
 ```
 
-then after cloning this repo you will replace the connection information in the db.js file at line 3:
+6. then after cloning this repo you will replace the connection information in the db.js file at line 3:
 
 ```js
 let uri = "mongodb://localhost:27017/{name_of_databse_you_created}";
 ```
 
-run npm install in the terminal in the software_mil folder
+7. run npm install in the terminal in the software_mil folder
 
-then run npm start
+8. then run npm start
 
 you should be able to add to and read documents to the database by using api calls to http://localhost:8080/api
 
