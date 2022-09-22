@@ -1,6 +1,14 @@
 # software_mil
 
-[install docker](https://docs.docker.com/engine/install/ubuntu/)
+[Install Docker](https://docs.docker.com/engine/install/ubuntu/)
+
+To create the container either navigate to the software_mil directory and run 
+```
+docker-compose up -d
+```
+or
+
+###In the terminal:  
 
 run the following command to create the directory where the db data will be stored:
 ```
