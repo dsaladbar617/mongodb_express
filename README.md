@@ -50,7 +50,13 @@ then after cloning this repo you will replace the connection information in the 
 let uri = "mongodb://localhost:27017/{name_of_databse_you_created}";
 ```
 
+run npm install in the terminal in the software_mil folder
+
+then run npm start
+
 you should be able to add to and read documents to the database
+
+
 
 
 ### Resources
