@@ -54,9 +54,7 @@ run npm install in the terminal in the software_mil folder
 
 then run npm start
 
-you should be able to add to and read documents to the database
-
-
+you should be able to add to and read documents to the database by using api calls to http://localhost:8080/api
 
 
 ### Resources
